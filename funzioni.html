@@ -1,0 +1,88 @@
+<html>
+	<head>
+		<title>Operazioni</title>
+
+		<script language="Javascript">
+			function Somma()
+			{
+				let a = parseInt(prompt("Inserisci il primo operando"   ));
+				let b = parseInt(prompt("Inserisci il secondo operando" ));
+
+				somma	   = a + b ;
+				alert ("Il risultato dell'addizione è "        + somma		);
+			}
+
+			function Differenza()
+			{
+				let a = parseInt(prompt("Inserisci il primo operando"   ));
+				let b = parseInt(prompt("Inserisci il secondo operando" ));
+
+				differenza = a - b ;
+				alert ("Il risultato della sottrazione è "     + differenza );
+			}
+
+			function Prodotto()
+			{
+				let a = parseInt(prompt("Inserisci il primo operando"   ));
+				let b = parseInt(prompt("Inserisci il secondo operando" ));
+
+				prodotto   = a * b ;
+				alert ("Il risultato della moltiplicazione è " + prodotto   );
+			}
+
+			function Quoziente()
+			{	
+				let a = parseInt(prompt("Inserisci il primo operando"   ));
+				let b = parseInt(prompt("Inserisci il secondo operando" ));
+
+				quoziente  = a / b ;
+				alert ("Il risultato della divisione è " 	   + quoziente  );
+			}
+
+			function Conta()
+			{
+				let n = parseInt(prompt("Quanti numeri vuoi inserire?"));
+				let negativi=0;
+				let positivi=0;
+
+				for(i=0; i<n; i++)
+				{
+				let a = parseInt(prompt("Inserisci un numero"));
+				if(a<0)
+					negativi += a;
+				else
+					positivi ++;
+				}
+				
+				alert("La somma dei numeri negativi è: "  +  negativi );
+				alert("I numeri positivi contati sono: "  +  positivi );
+			}
+
+			function Brev()
+			{
+				let nome        = prompt("Inserisci il tuo nome:")    ;
+				let cognome     = prompt("Inserisci il tuo cognome:") ;
+
+				let nomebrev    = nome.substring(0,1)    ;
+				let cognomebrev = cognome.substring(0,1) ;
+
+				alert("L'abbreviazione è: " + nomebrev + "." + (cognome == "" ? "" : cognomebrev + "."));
+			}
+		</script>
+	</head>
+	<body>
+		<h1>Esercizio 0(a):</h1>
+		<input type="button" name="somma" value="Somma" onclick="Somma();">
+		<input type="button" name="differenza" value="Differenza" onclick="Differenza();">
+		<input type="button" name="prodotto" value="Prodotto" onclick="Prodotto();">
+		<input type="button" name="quoziente" value="Quoziente" onclick="Quoziente();">
+		<div>
+			<h1>Esercizio 0(b)</h1>
+			<input type="button" name="conta" value="Conta" onclick="Conta();">
+		</div>
+		<div>
+			<h1>Esercizio 0(c)</h1>
+			<input type="button" name="abbrevia" value="Abbrevia" onclick="Brev();">
+		</div>
+	</body>
+</html>
